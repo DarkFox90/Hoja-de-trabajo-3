@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 public class MergeSort {
     public <T extends Comparable<T>> void sort(T[] arr, int left, int right) {
         if (left < right) {

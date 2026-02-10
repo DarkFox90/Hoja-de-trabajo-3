@@ -1,6 +1,6 @@
 import java.util.Arrays;
 public class RadixSort {
-    public static void sort(Integer[] arr) {
+    public void sort(Integer[] arr) {
         if (arr.length == 0) return;
         int m = getMax(arr, arr.length);
         

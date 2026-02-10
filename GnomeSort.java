@@ -1,6 +1,6 @@
 public class GnomeSort {
 
-    public static <T extends Comparable<T>> void sort(T[] arr) {
+    public <T extends Comparable<T>> void sort(T[] arr) {
         int index = 0;
 
         while (index < arr.length) {
