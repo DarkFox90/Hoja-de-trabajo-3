@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) throws Exception {
-        FileAssistant.GenerateNumbers("Numeros.txt", 3000);
         int[] cantidades = {100, 500, 1000, 1500, 2000, 2500, 3000};
 
         QuickSort quickSort = new QuickSort();
@@ -11,7 +10,7 @@ public class Main {
 
         for (int cantidad : cantidades) {
             System.out.println("Cantidad de números: " + cantidad);
-            Integer[] arr = FileAssistant.readNumbers("Numeros.txt", cantidad);
+            Integer[] arr = FileAssistant.ReadNumbers("Numeros.txt");
             
             long start = System.nanoTime();
             quickSort.sort(arr, 0, arr.length - 1);
