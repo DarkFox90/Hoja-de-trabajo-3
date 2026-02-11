@@ -2,25 +2,56 @@ import java.util.Arrays;
 
 public class Main {
 
+    private static final int Iteraciones = 5000; 
+    private static final int[] tamanio = {3000};
+
     public static void main(String[] args) throws Exception {
 
-        Thread.sleep(5000);
+        System.out.println("presionar enter para comenzar los sorts");
+        System.in.read();
 
-        Integer[] original = FileAssistant.ReadNumbers("Numeros.txt");
+        for (int tamano : tamanio) {
+            Integer[] original = FileAssistant.ReadNumbers("Numeros.txt");
+            QuickSort(original);
+            MergeSort(original);
+            GnomeSort(original);
+            InsertionSort(original);
+            RadixSort(original);
+        }
+    }
 
-        Integer[] arr1 = Arrays.copyOf(original, original.length);
-        QuickSort.sort(arr1);
+    private static void QuickSort(Integer[] original) {
+        for (int i = 0; i < Iteraciones; i++) {
+            Integer[] copia = Arrays.copyOf(original, original.length);
+            QuickSort.sort(copia);
+        }
+    }
 
-        Integer[] arr2 = Arrays.copyOf(original, original.length);
-        MergeSort.sort(arr2);
+    private static void MergeSort(Integer[] original) {
+        for (int i = 0; i < Iteraciones; i++) {
+            Integer[] copia = Arrays.copyOf(original, original.length);
+            MergeSort.sort(copia);
+        }
+    }
 
-        Integer[] arr3 = Arrays.copyOf(original, original.length);
-        GnomeSort.sort(arr3);
+    private static void GnomeSort(Integer[] original) {
+        for (int i = 0; i < Iteraciones; i++) {
+            Integer[] copia = Arrays.copyOf(original, original.length);
+            GnomeSort.sort(copia);
+        }
+    }
 
-        Integer[] arr4 = Arrays.copyOf(original, original.length);
-        InsertionSort.sort(arr4);
+    private static void InsertionSort(Integer[] original) {
+        for (int i = 0; i < Iteraciones; i++) {
+            Integer[] copia = Arrays.copyOf(original, original.length);
+            InsertionSort.sort(copia);
+        }
+    }
 
-        Integer[] arr5 = Arrays.copyOf(original, original.length);
-        RadixSort.sort(arr5);
+    private static void RadixSort(Integer[] original) {
+        for (int i = 0; i < Iteraciones; i++) {
+            Integer[] copia = Arrays.copyOf(original, original.length);
+            RadixSort.sort(copia);
+        }
     }
 }
