@@ -1,3 +1,12 @@
+/*
+para que funcione el programa se debe de modificar el archivo Numeros.txt
+se deben de borrar las lineas necesarias para cada cantidad
+por ejemplo el archivo tiene 3000 y se deben de borrar 1000 lineas para probar el profiler con 2000 numeros
+
+borrar para ajustar a 3000, 2000, 1200, 1000, 100
+
+*/
+
 import java.util.Arrays;
 
 public class Main {
