@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
+
 public class SortTest {
 
     private Integer[] desordenado() {
@@ -42,6 +43,48 @@ public class SortTest {
     void mergeSort_ordenado() {
         Integer[] arr = ordenado();
         MergeSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void gnomeSort_desordenado() {
+        Integer[] arr = desordenado();
+        GnomeSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void gnomeSort_ordenado() {
+        Integer[] arr = ordenado();
+        GnomeSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void insertionSort_desordenado() {
+        Integer[] arr = desordenado();
+        InsertionSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void insertionSort_ordenado() {
+        Integer[] arr = ordenado();
+        InsertionSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void radixSort_desordenado() {
+        Integer[] arr = desordenado();
+        RadixSort.sort(arr);
+        assertOrdenado(arr);
+    }
+
+    @Test
+    void radixSort_ordenado() {
+        Integer[] arr = ordenado();
+        RadixSort.sort(arr);
         assertOrdenado(arr);
     }
     
